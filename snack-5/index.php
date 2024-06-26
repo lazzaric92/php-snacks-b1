@@ -1,1 +1,20 @@
 <!-- // todo: Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
+
+<?php 
+    $fullParagraph = "IL terrore che sarebbe durato per ventotto anni, ma forse di più, ebbe inizio, per quel che mi è dato di sapere e narrare, con una barchetta di carta di giornale che scendeva lungo un marciapiede in un rivolo gonfio di pioggia.
+    La barchetta beccheggiò, s’inclinò, si raddrizzò, affrontò con coraggio i gorghi infidi e proseguì per la sua rotta giù per Witcham Street, verso il semaforo che segnava l’incrocio con la Jackson. Le tre lampade disposte in verticale su tutti i lati del semaforo erano spente, in quel pomeriggio d’autunno del 1957, e spente erano anche le finestre di tutte le case. Pioveva ininterrottamente ormai da una settimana e da due giorni si erano alzati i venti. Allora quasi tutti i quartieri di Derry erano rimasti senza corrente e l’erogazione non era stata ancora ripristinata.
+    Un bambino in impermeabile giallo e stivaletti rossi correva allegramente dietro alla barchetta di carta. La pioggia era tutt’altro che cessata, ma la sua violenza si andava finalmente allentando. Tamburellava sul cappuccio giallo del bimbo e suonava alle sue orecchie come pioggia su una tettoia: un rumore amico, quasi intimo. Il bambino con l’impermeabile giallo era George Denbrough. Aveva sei anni. Suo fratello William, conosciuto fra i ragazzini della scuola elementare di Derry (e anche fra gli insegnanti, che mai avrebbero usato quel soprannome in sua presenza) come Bill Tartaglia, era a casa a smaltire i postumi di una brutta influenza. Nell’autunno del 1957, otto mesi prima che l’orrore si manifestasse definitivamente e ventotto anni prima dello scontro finale, Bill Tartaglia aveva dieci anni. 
+    Bill aveva confezionato la barchetta che George stava inseguendo. L’aveva fabbricata a letto, seduto con la schiena appoggiata a una pila di guanciali, mentre la loro madre suonava Für Elise al pianoforte del salotto e la pioggia batteva senza posa contro il vetro della sua finestra.
+    [...]
+    George sostò appena oltre i cavalletti, ai bordi di una voragine che si era aperta nell’asfalto di Witcham Street. Il crepaccio disegnava una diagonale quasi perfetta. Terminava sull’altro lato della strada, una quindicina di metri sotto il dosso in cima al quale George si era fermato. Rise forte e quell’espressione di solitaria gioia infantile vibrò cristallina nel pomeriggio grigio, mentre un capriccio della corrente trascinava la sua barchetta di carta in una rapida in scala ridotta, formata dalla spaccatura nell’asfalto. L’irruenza dell’acqua aveva dato origine a un flusso che scorreva lungo la diagonale, così la sua barchetta compì la traversata da un lato all’altro di Witcham Street, trascinata con tanta foga che George dovette correre a perdifiato per starle dietro. Onde di acqua limacciosa si aprivano da sotto i suoi stivali e le fibbie producevano un gaio tintinnio, mentre George Denbrough andava verso la sua strana morte. E il sentimento che lo colmava in quei momenti era amore semplice e puro per suo fratello Bill… amore e una punta di rimpianto, perché Bill non era potuto scendere con lui ad assistere a questo spettacolo. Senz’altro avrebbe cercato di descriverglielo quando fosse tornato a casa, ma sapeva che non sarebbe mai stato capace di farglielo vedere, come sicuramente Bill lo avrebbe fatto vedere a lui, se si fossero scambiate le parti. Bill era un campione nel leggere e nello scrivere, ma nonostante la tenera età George era abbastanza intelligente da capire che quello non era l’unico motivo per cui Bill aveva fior di pagelle e ai suoi insegnanti piacevano tanto i suoi temi. Il suo talento nel raccontare aveva un’importanza solo parziale: Bill sapeva vedere.";
+
+    $shortParagraphs = explode("\n", $fullParagraph);
+?>
+
+<ul>
+    <?php foreach ($shortParagraphs as $paragraph) { ?>
+        <li>
+            <?php echo $paragraph; ?>
+        </li>
+    <?php } ?>
+</ul>
