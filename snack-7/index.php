@@ -9,5 +9,6 @@ include_once __DIR__ . "/class.php";
 <ul>
     <?php foreach ($class as $student) { ?>
         <h2> <?php echo $student["name"] . " " . $student["lastName"] ?> </h2>
+        <h3> Average grade: <?php echo (array_sum($student["marks"]) / count($student["marks"])) ?> </h3>
     <?php } ?>
 </ul>
