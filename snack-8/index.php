@@ -9,17 +9,31 @@ $reptilesArray = [];
 $otherAnimalsArray = [];
 
 foreach ($animals as $animal) {
-    if($animal["class"] === "Mammifero"){
-        $mammalsArray[] = $animal;
-    } elseif ($animal["class"] === "Pesce") {
-        $piscesArray[] = $animal;
-    } elseif ($animal["class"] === "Rettile") {
-        $reptilesArray[] = $animal;
-    } else {
-        $otherAnimalsArray[] = $animal;
-    }
+    // if($animal["class"] === "Mammifero"){
+    //     $mammalsArray[] = $animal;
+    // } elseif ($animal["class"] === "Pesce") {
+    //     $piscesArray[] = $animal;
+    // } elseif ($animal["class"] === "Rettile") {
+    //     $reptilesArray[] = $animal;
+    // } else {
+    //     $otherAnimalsArray[] = $animal;
+    // }
+    $mammalsArray = array_filter($animals, function ($animal) {
+        return ($animal["class"] === "Mammifero");
+    });
+    $piscesArray = array_filter($animals, function ($animal) {
+        return ($animal["class"] === "Pesce");
+    });
+    $reptilesArray = array_filter($animals, function ($animal) {
+        return ($animal["class"] === "Rettile");
+    });
+    $otherAnimalsArray = array_filter($animals, function ($animal) {
+        return ($animal["class"] !== "Mammifero" && $animal["class"] !== "Pesce" && $animal["class"] !== "Rettile");
+    });
+    
 }
 
 var_dump($mammalsArray, $piscesArray, $reptilesArray, $otherAnimalsArray);
+
 
 ?>
